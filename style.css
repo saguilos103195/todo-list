@@ -1,0 +1,51 @@
+
+.wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+.clearfix
+{
+    overflow: hidden;
+}
+.title
+{
+    background-color: gray;
+    border: red solid 2px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+}
+.desc
+{
+    background-color: gray;
+    border: red solid 2px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 900px;
+    height: 100px;
+    font-size: 15px;
+}
+.date
+{
+    background-color: gray;
+    border: red solid 2px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+}
+.btnadd
+{
+    background-color: gray;
+    border: red solid 2px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+}
