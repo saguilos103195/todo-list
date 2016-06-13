@@ -20,10 +20,10 @@ $result = $data->fetchAll(PDO::FETCH_ASSOC);
     <div class="clearfix">
         <form action="add.php" method="POST">
             <div>
-                <input class="title" type="text" name="title">
+                <input class="title" type="text" placeholder="Enter Title" name="title">
             </div>
             <div>
-                <textarea class="desc" name="description" cols="30" rows="10"></textarea>
+                <textarea class="desc" name="description" placeholder="Write something." cols="30" rows="10"></textarea>
             </div>
             <div>
                 <input class="date" type="date" name="date">
@@ -40,10 +40,10 @@ $result = $data->fetchAll(PDO::FETCH_ASSOC);
                 echo "<h1>$perresult[title]</h1>";
                 echo "<p>$perresult[description]</p>";
                 echo "<p>$perresult[date_created]</p>";
-                echo "<a class=btnadd href=delete.php?id=";
+                echo "<a class=cont mod href=delete.php?id=";
                 echo $perresult[id];
                 echo ">Delete</a><br>";;
-                echo "<a class=btnadd href=update.php?id=";
+                echo "<a class=cont mod href=update.php?id=";
                 echo $perresult[id];
                 echo ">Update</a><br>";;
                 echo "</form>";
