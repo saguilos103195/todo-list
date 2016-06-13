@@ -36,7 +36,7 @@ $result = $data->fetchAll(PDO::FETCH_ASSOC);
         <?php
 
         foreach ($result as $perresult) {
-                echo "<form action=delete.php method=POST";
+                echo "<form class=todogui action=delete.php method=POST";
                 echo "<h1>$perresult[title]</h1>";
                 echo "<p>$perresult[description]</p>";
                 echo "<p>$perresult[date_created]</p>";
@@ -45,13 +45,8 @@ $result = $data->fetchAll(PDO::FETCH_ASSOC);
                 echo ">Delete</a><br>";;
                 echo "<a class=btnadd href=update.php?id=";
                 echo $perresult[id];
-                echo " && title=";
-                echo $perresult[title];
-                echo " && description=";
-                echo $perresult[description];
-                echo " && date_created=";
-                echo $perresult[date_created];
                 echo ">Update</a><br>";;
+                echo "</form>";
 
         }
 

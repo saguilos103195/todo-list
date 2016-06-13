@@ -13,4 +13,8 @@ $statement->execute($todo = [
 ]
 );
 
+header("Location: index.php");
+exit;
+
+
 ?>

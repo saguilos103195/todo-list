@@ -1,4 +1,7 @@
-
+body
+{
+    background-color: #e6e6ff;
+}
 .wrapper
 {
     width: 960px;
@@ -9,6 +12,15 @@
 {
     overflow: hidden;
 }
+
+.todogui
+{
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
 .title
 {
     background-color: gray;
@@ -47,5 +59,12 @@
     margin-bottom: 15px;
     width: 250px;
     height: 30px;
-    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px
+}
+.mod
+{
+    float: left;
+    display: inline-block;
 }

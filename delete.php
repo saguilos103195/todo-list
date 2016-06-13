@@ -6,4 +6,7 @@ $statement = $link->prepare("DELETE FROM todolist WHERE id= :id");
 $statement->bindParam(':id', $_GET['id']);
 $statement->execute();
 
+header("Location: index.php");
+exit;
+
 ?>
