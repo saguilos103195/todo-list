@@ -1,11 +1,28 @@
 <?php
 
-
 $db = new PDO('mysql:host=localhost;dbname=todo', "root", "p@");
+require_once('lib.php');
 
-$data = $db->query('SELECT * FROM todolist');
-$result = $data->fetchAll(PDO::FETCH_ASSOC);
 
+class Main
+{
+    public function __construct($db)
+    {
+
+    }
+    public function fetchAllTodo($db)
+    {
+        $data = $db->query('SELECT * FROM todolist');
+        $result = $data->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
+
+}
+
+$m = new Main($db);
+$m->fetchAllTodo($db);
 
 ?>
 
@@ -20,13 +37,13 @@ $result = $data->fetchAll(PDO::FETCH_ASSOC);
     <div class="clearfix">
         <form action="add.php" method="POST">
             <div>
-                <input class="title" type="text" placeholder="Enter Title" name="title">
+                <input class="title" type="text" required="required" placeholder="Enter Title" name="title">
             </div>
             <div>
-                <textarea class="desc" name="description" placeholder="Write something." cols="30" rows="10"></textarea>
+                <textarea class="desc" name="description" required="required" placeholder="Write something." cols="30" rows="10"></textarea>
             </div>
             <div>
-                <input class="date" type="date" name="date">
+                <input class="date" type="date" required="required" name="date">
             </div>
             <div>
                 <button class="btnadd" type="submit">Add</button>
@@ -35,7 +52,7 @@ $result = $data->fetchAll(PDO::FETCH_ASSOC);
 
         <?php
 
-        foreach ($result as $perresult) {
+        foreach ($m->fetchAllTodo($db) as $perresult) {
                 echo "<form class=todogui action=delete.php method=POST";
                 echo "<h1>$perresult[title]</h1>";
                 echo "<p>$perresult[description]</p>";
